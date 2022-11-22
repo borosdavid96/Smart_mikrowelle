@@ -1,4 +1,15 @@
+/*
+https://randomnerdtutorials.com/solved-reconnect-esp32-to-wifi/
 
+//wifi ip
+void WiFiGotIP(WiFiEvent_t event, WiFiEventInfo_t info){
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+
+*/
 
 #include <ESPmDNS.h>
 #include <WiFiUdp.h>
@@ -28,6 +39,7 @@ unsigned long timer = 0;
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
 bool mikroison = false;
 
 const char* ssid = "Boros";
@@ -41,6 +53,7 @@ const int REFRESH_INTERVAL = 4000;  // Update rate in milliseconds
 
 int mp = 0;
 int p = 0;
+
 
 void time_reset() {
   mp = 0;
@@ -138,10 +151,10 @@ void setup() {
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {  // Address 0x3D for 128x64
     Serial.println(F("SSD1306 allocation failed"));
-    for (;;)
-      ;
   }
-  delay(50);
+  
+
+  
   pinMode(BUTTON_PIN, INPUT_PULLUP);  // config GIOP21 as input pin and enable the internal pull-up resistor
   pinMode(relay1, OUTPUT);            //relay
   pinMode(relay2, OUTPUT);            //relay
@@ -150,37 +163,59 @@ void setup() {
   relays_off();
 
   //connect to WiFi
+  
   display.clearDisplay();
-
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0, 10);
   // Display static text
   display.println("OKOS MIKRO v1.1     w/OTA");
   display.display();  
-
+  
+  delay(100);
+  
   Serial.printf("Connecting to %s ", ssid);
+  
   WiFi.begin(ssid, password);
+  
   /* while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-  Serial.println("Wifi CONNECTED");
-  */
-
-  display.clearDisplay();
+   */
+  time_now = millis();
+  //varakozas wifire egy ideig ha nem megy akkor tovabblepes
+   while (millis() < time_now + 5000 || WiFi.status() != WL_CONNECTED ){
+     
+   Serial.println("Wifi CONNECTTING");
+   display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(20, 10);
+  // Display static text
+  display.println("Wifi CONNECTING");
+  display.display();
+   }
+  
+  if(WiFi.status() == WL_CONNECTED){
+  Serial.println("Wifi OK");
+   display.clearDisplay();
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(20, 10);
   // Display static text
   display.println("Wifi OK");
   display.display();
+    
+  //init and get the time
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+}
 
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(20, 30);
   // Display static text
-  display.println("Loading");
+  display.println("Loading..");
   display.display();
 
   //////////////////////////////////////////////////OTA///////////////////////////////////////////////////
@@ -218,11 +253,7 @@ void setup() {
       else if (error == OTA_END_ERROR) Serial.println("End Failed");
     });
   ArduinoOTA.begin();
-
   //////////////////////////////////////////////////OTA///////////////////////////////////////////////////
-
-  //init and get the time
-  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
 
 
 
@@ -233,6 +264,7 @@ void loop() {
 
   if (!(touchRead(4) > 55)) {
     time_now = millis();
+    mikrotime();  //ido hozzaadas kijelzes
     delay(100);  //lassitas a tul hamari hozzaadas miatt
 
     while (millis() < time_now + 2000) {
@@ -300,8 +332,14 @@ void loop() {
   } else {
     digitalWrite(relay2, HIGH);
   }
-
-
+  
+  //wifi reconnect
+  if (WiFi.status() != WL_CONNECTED){
+    Serial.println("Reconnecting to WIFI network");
+    WiFi.disconnect();
+    WiFi.reconnect();
+  }
+  
   display.clearDisplay();
   printLocalTime();
   ArduinoOTA.handle();
