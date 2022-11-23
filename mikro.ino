@@ -336,7 +336,7 @@ void loop() {
   //wifi reconnect
   if (WiFi.status() != WL_CONNECTED){
     Serial.println("Reconnecting to WIFI network");
-    WiFi.disconnect();
+   // WiFi.disconnect();
     WiFi.reconnect();
   }
   
