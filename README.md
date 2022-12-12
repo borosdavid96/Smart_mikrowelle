@@ -10,8 +10,8 @@ Parts:
 -Esp32 dual core MCU
 
 Features:
--NTP time and date displaying from wifi
--Working without Wifi or NTP Time connection
+  -NTP time and date displaying from wifi
+  -Working without Wifi or NTP Time connection
 
 -Two buttons
   --With the firs u can add 30s to the time (after 8min it will be adding 1 minutes until it reaches 30min after that it goes back to 0)
