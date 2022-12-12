@@ -4,6 +4,7 @@
 Only the pcb that controls it was replaced, all safety and hw features remained intact. ( for example: thermal switch,lamp,cooling ventillator, plate rotating motor)
 
 Parts:
+
 -A 128*64 oled display
 
 -4channel relay
@@ -13,6 +14,7 @@ Parts:
 -Esp32 dual core MCU
 
 Features:
+
 -NTP time and date displaying from wifi
 
 -Working without Wifi or NTP Time connection
@@ -35,10 +37,13 @@ Features:
 
 
 Further development opportunities:
+
 -Better multitasking
+
 -Better code optimalization
 
 Pics: 
+
 ![20221212_144945](https://user-images.githubusercontent.com/37541810/207062094-d013c6ac-4b2f-4844-989c-8dc3842803fb.jpg)
 ![20221212_142643](https://user-images.githubusercontent.com/37541810/207062100-a2f1f703-5ff9-441d-ac47-aa46eed72144.jpg)
 
