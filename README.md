@@ -7,6 +7,7 @@ Total work until working: 12hours
 
 with fine tuning: ~4-6 Days
 
+
 Parts:
 
 -A 128*64 oled display
@@ -16,6 +17,7 @@ Parts:
 -Two buttons
 
 -Esp32 dual core MCU
+
 
 Features:
 
