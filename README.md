@@ -9,7 +9,7 @@ Parts:
 -Two buttons
 -Esp32 dual core MCU
 
-Features [x]:
+Features:
 -NTP time and date displaying from wifi
 -Working without Wifi or NTP Time connection
 
@@ -26,7 +26,7 @@ Features [x]:
 
 
 
-Further development opportunities [ ]:
+Further development opportunities:
 -Better multitasking
 -Better code optimalization
 
