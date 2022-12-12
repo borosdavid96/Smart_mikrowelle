@@ -5,7 +5,7 @@ Only the pcb that controls it was replaced, all safety and hw features remained 
 
 Total work until working: 12hours
 
-with fine tuning: ~4-6 Days
+with fine tuning: ~3-5 Days
 
 
 >Parts:
