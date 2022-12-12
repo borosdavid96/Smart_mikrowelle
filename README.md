@@ -3,6 +3,8 @@
 
 Only the pcb that controls it was replaced, all safety and hw features remained intact. ( for example: thermal switch,lamp,cooling ventillator, plate rotating motor)
 
+Total work: ~3-6 Days
+
 Parts:
 
 -A 128*64 oled display
