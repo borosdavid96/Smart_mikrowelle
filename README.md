@@ -19,7 +19,7 @@ with fine tuning: ~4-6 Days
 -Esp32 dual core MCU
 
 
-**Features**:
+>Features:
 
 -NTP time and date displaying from wifi
 
@@ -42,7 +42,7 @@ with fine tuning: ~4-6 Days
 
 
 
-**Further development opportunities**:
+>Further development opportunities:
 
 -Better multitasking
 
