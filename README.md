@@ -8,7 +8,7 @@ Total work until working: 12hours
 with fine tuning: ~4-6 Days
 
 
-Parts:
+**Parts:
 
 -A 128*64 oled display
 
@@ -19,7 +19,7 @@ Parts:
 -Esp32 dual core MCU
 
 
-Features:
+**Features:
 
 -NTP time and date displaying from wifi
 
@@ -42,13 +42,13 @@ Features:
 
 
 
-Further development opportunities:
+**Further development opportunities:
 
 -Better multitasking
 
 -Better code optimalization
 
-Pics: 
+**Pics: 
 
 ![20221212_144945](https://user-images.githubusercontent.com/37541810/207062094-d013c6ac-4b2f-4844-989c-8dc3842803fb.jpg)
 ![20221212_142643](https://user-images.githubusercontent.com/37541810/207062100-a2f1f703-5ff9-441d-ac47-aa46eed72144.jpg)
