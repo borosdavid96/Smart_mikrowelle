@@ -31,6 +31,7 @@ Further development opportunities [ ]:
 -Better code optimalization
 
 Pics: 
+![20221212_144945](https://user-images.githubusercontent.com/37541810/207062094-d013c6ac-4b2f-4844-989c-8dc3842803fb.jpg)
+![20221212_142643](https://user-images.githubusercontent.com/37541810/207062100-a2f1f703-5ff9-441d-ac47-aa46eed72144.jpg)
 
-![20221212_142618](https://user-images.githubusercontent.com/37541810/207056705-b00b36d4-cf03-4e0e-8007-e8fc40055d9f.jpg)
-![20221212_142643](https://user-images.githubusercontent.com/37541810/207056708-7504eca1-efe4-401b-b4da-4e904fdccc01.jpg)
+
