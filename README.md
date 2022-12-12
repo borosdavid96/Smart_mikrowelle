@@ -3,7 +3,9 @@
 
 Only the pcb that controls it was replaced, all safety and hw features remained intact. ( for example: thermal switch,lamp,cooling ventillator, plate rotating motor)
 
-Total work: ~3-6 Days
+Total work until working: 12hours
+
+with fine tuning: ~4-6 Days
 
 Parts:
 
