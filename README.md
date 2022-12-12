@@ -10,13 +10,13 @@ Parts:
 -Esp32 dual core MCU
 
 Features:
-  -NTP time and date displaying from wifi
-  -Working without Wifi or NTP Time connection
+-NTP time and date displaying from wifi
+-Working without Wifi or NTP Time connection
 
 -Two buttons
-  --With the firs u can add 30s to the time (after 8min it will be adding 1 minutes until it reaches 30min after that it goes back to 0)
-  --The second button has multi pourpuse if the micro is not operating it is a Popcorn "button" (automatic 3min timer) if it is working this button serves as a stopp button
-  --IF both is pressed it restarts
+-With the firs u can add 30s to the time (after 8min it will be adding 1 minutes until it reaches 30min after that it goes back to 0)
+-The second button has multi pourpuse if the micro is not operating it is a Popcorn "button" (automatic 3min timer) if it is working this button serves as a stopp button
+-IF both is pressed it restarts
  
  -IF the door is open while functioning all the operation stopps and resets, if it opens up while time adding it waits until it closed with a message on display 
  -IF the door is opened the lamp turns on
